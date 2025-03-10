@@ -1,10 +1,20 @@
+// app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <div class="app-container">
+      <router-outlet></router-outlet>
+    </div>
+  `,
+  styles: [`
+    .app-container {
+      min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+    }
+  `]
 })
 export class AppComponent {
-  title = 'privacy-policy';
+  title = 'Echo Memory Privacy Policy';
 }
